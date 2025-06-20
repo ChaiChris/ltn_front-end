@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+const newsApi = process.env.REACT_APP_API_BASE_URL;
 
 export const UseNewsListFetch = () => {
   const [newsList, setNewsList] = useState([]);
@@ -10,7 +11,7 @@ export const UseNewsListFetch = () => {
     setLoading(true);
     setError(null);
     axios
-      .get("http://localhost:8080/index.php/news")
+      .get(`${newsApi}/news`)
       .then((res) => {
         if (!res.data || !res.data.data) {
           throw new Error("沒有抓到資料");
@@ -37,7 +38,7 @@ export const UseCategoryNewsListFetch = (id) => {
     setLoading(true);
     setError(null);
     axios
-      .get(`http://localhost:8080/index.php/news/category/${id}`)
+      .get(`${newsApi}/news/category/${id}`)
       .then((res) => {
         if (!res.data || !res.data.data) {
           throw new Error("沒有抓到資料");
@@ -63,7 +64,7 @@ export const UseCategoriesFetch = () => {
     setLoading(true);
     setError(null);
     axios
-      .get("http://localhost:8080/index.php/category")
+      .get(`${newsApi}/category`)
       .then((res) => {
         if (!res.data || !res.data.data) {
           throw new Error("沒有抓到資料");
