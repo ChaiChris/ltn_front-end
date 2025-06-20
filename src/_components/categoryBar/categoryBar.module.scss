@@ -1,0 +1,12 @@
+.atag {
+  display: inline-block;
+  font-family: "Noto Sans TC", "微軟正黑體";
+  font-size: 18px;
+  font-weight: 400;
+  padding: 0 8px;
+  color: #ffffff;
+
+  &:hover {
+    color: #dbdbdb;
+  }
+}

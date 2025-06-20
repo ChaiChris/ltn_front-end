@@ -1,0 +1,38 @@
+.news-card {
+  //卡片長寬
+  width: 360px;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+
+  //內容間距
+  gap: 8px;
+  img {
+    //限制圖片為16/9
+    cursor: pointer;
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+  }
+  .news-card-body {
+    .news-card-title {
+      font-size: 26px;
+      line-height: 1.5;
+
+      //指針鼠標
+      cursor: pointer;
+
+      //限制行數為兩行
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

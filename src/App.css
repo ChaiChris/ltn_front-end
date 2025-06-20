@@ -1,38 +1,14 @@
-.App {
-  text-align: center;
-}
+.main-content {
+  width: 100%;
+  padding: 24px 32px;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  /* 設定最小寬度防止footer跳動 */
+  min-height: 100%;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  /* 防止footer覆蓋 */
+  margin-bottom: 90px;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  /* 版面置中 */
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

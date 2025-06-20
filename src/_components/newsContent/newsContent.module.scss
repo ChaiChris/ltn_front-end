@@ -1,0 +1,13 @@
+.news-card-container {
+  display: grid;
+  //最大寬度
+  max-width: 1500px;
+
+  //置中
+  margin: 0 auto;
+
+  //每格寬度 360px，不足則換行
+  grid-template-columns: repeat(auto-fill, 360px);
+
+  gap: 20px;
+}
